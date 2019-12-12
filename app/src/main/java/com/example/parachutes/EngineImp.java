@@ -1,9 +1,16 @@
 package com.example.parachutes;
 
+import android.util.Log;
+
 import java.util.Vector;
 
-public class EngineImp implements Engine {
-    private AirPlane airPlane = new AirPlaneImp();
+public class EngineImp extends Engine {
+    private AirPlane airPlane;
+
+    public EngineImp(int boardHeight, int boardWidth) {
+        super(boardHeight, boardWidth);
+        airPlane = new AirPlaneImp(boardWidth);
+    }
 
     @Override
     public void run() {
