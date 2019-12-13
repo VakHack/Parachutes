@@ -2,7 +2,7 @@ package com.example.parachutes;
 
 class AirplaneImp extends Airplane {
     private int PLANE_SPEED = 1000;
-    private ParachutesHandler parachutesHandler = new ListParachutesHandler();
+    private ParachutesHandler parachutesHandler = new QueueParachutesHandler();
     private DropRateCalculator dropRateCalculator = new RandDropRateCalc();
 
     public AirplaneImp(int boardWidth, int boardHeight) {

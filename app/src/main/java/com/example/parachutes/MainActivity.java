@@ -4,11 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
-    private static int BOARD_HEIGHT = 4;
-    private static int BOARD_WIDTH = 10;
+    private static int BOARD_HEIGHT = 6;
+    private static int BOARD_WIDTH = 6;
     private Engine engine = new EngineImp(BOARD_HEIGHT, BOARD_WIDTH);
+
+    ImageButton leftButton;
+    ImageButton rightButton;
 
     void debugPrintBoard(){
         boolean[][] board = Board.getInstance().getBoard();
@@ -28,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 while (true){
                     debugPrintBoard();
                     try {
-                        Thread.sleep(500);
+                        Thread.sleep(2000);
                     }
                     catch (InterruptedException e)
                     {
@@ -46,15 +52,21 @@ public class MainActivity extends AppCompatActivity {
         Board.getInstance().setSize(BOARD_HEIGHT, BOARD_WIDTH);
         engine.run();
         debugRender();
+        leftButton = findViewById(R.id.leftButton);
+        rightButton = findViewById(R.id.rightButton);
 
-        engine.moveLeft();
-        engine.moveLeft();
-        engine.moveLeft();
-        engine.moveLeft();
-        engine.moveRight();
-        engine.moveRight();
-        engine.moveRight();
-        engine.moveRight();
-        engine.moveRight();
+        leftButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                engine.moveLeft();
+            }
+        });
+
+        rightButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                engine.moveRight();
+            }
+        });
     }
 }

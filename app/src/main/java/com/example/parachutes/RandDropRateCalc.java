@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class RandDropRateCalc implements DropRateCalculator {
     private static int[] DROP_RATES = {10, 5, 2};
-    //as a default, initializing the drop rate to mid-range
+    //as a default, initializing the drop rate to mid-range (1 out of n plane moves)
     private int dropRate = DROP_RATES[1];
 
     @Override
