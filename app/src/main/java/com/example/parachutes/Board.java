@@ -11,19 +11,19 @@ public class Board {
 
     //here board size is to be determined. Min 4*4
     //starting with an empty board (no initialization needed - default val is already false)
-    public void setSize(int m, int n) {
-        m = m < 4 ? 4 : m;
-        n = n < 4 ? 4 : n;
-        board = new boolean[m][n];
+    public void setSize(int height, int width) {
+        height = height < 4 ? 4 : height;
+        width = width < 4 ? 4 : width;
+        board = new boolean[height][width];
     }
 
     //synchronized because will be edited by two threads - airplane and boat
     //to avoid race condition
     public synchronized void setBoard(int m, int n, boolean val){
-        if(m > 0 && n > 0)
-            board[m - 1][n - 1] = val;
+        if(m >= 0 && n >= 0)
+            board[m][n] = val;
     }
 
-    public boolean[][] getBoard() {
+    public synchronized boolean[][] getBoard() {
         return board;
     }}

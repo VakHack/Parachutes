@@ -1,20 +1,20 @@
 package com.example.parachutes;
 
-import android.util.Log;
-
-import java.util.Vector;
-
 public class EngineImp extends Engine {
-    private AirPlane airPlane;
+    private Airplane airplane;
+    private Boat boat;
 
     public EngineImp(int boardHeight, int boardWidth) {
         super(boardHeight, boardWidth);
-        airPlane = new AirPlaneImp(boardWidth);
+        airplane = new AirplaneImp(boardWidth);
+        boat = new BoatImp(boardWidth, boardHeight);
     }
 
     @Override
     public void run() {
-        airPlane.fly();
+        airplane.setInitialPos();
+        boat.setInitialPos();
+        airplane.fly();
     }
 
     @Override
@@ -24,16 +24,16 @@ public class EngineImp extends Engine {
 
     @Override
     public void setDifficulty(Difficulty dif) {
-
+        airplane.difficulty(dif);
     }
 
     @Override
     public void moveLeft() {
-
+        boat.moveLeft();
     }
 
     @Override
     public void moveRight() {
-
+        boat.moveRight();
     }
 }

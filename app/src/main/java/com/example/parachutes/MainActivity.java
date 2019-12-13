@@ -23,16 +23,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void debugRender() {
-        while (true){
-            debugPrintBoard();
-            try {
-                Thread.sleep(500);
+        new Thread(new Runnable() {
+            public void run(){
+                while (true){
+                    debugPrintBoard();
+                    try {
+                        Thread.sleep(500);
+                    }
+                    catch (InterruptedException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
             }
-            catch (InterruptedException e)
-            {
-                e.printStackTrace();
-            }
-        }
+        }).start();
     }
 
     @Override
@@ -42,5 +46,15 @@ public class MainActivity extends AppCompatActivity {
         Board.getInstance().setSize(BOARD_HEIGHT, BOARD_WIDTH);
         engine.run();
         debugRender();
+
+        engine.moveLeft();
+        engine.moveLeft();
+        engine.moveLeft();
+        engine.moveLeft();
+        engine.moveRight();
+        engine.moveRight();
+        engine.moveRight();
+        engine.moveRight();
+        engine.moveRight();
     }
 }
