@@ -1,12 +1,12 @@
 package com.example.parachutes;
 
 class AirplaneImp extends Airplane {
-    private static int[] DROP_RATES = {700, 1000, 1200};
-    //as a default, initializing the drop rate to mid-range
-    private int dropRate = DROP_RATES[1];
+    private int PLANE_SPEED = 1000;
+    private ParachutesHandler parachutesHandler = new ListParachutesHandler();
+    private DropRateCalculator dropRateCalculator = new RandDropRateCalc();
 
-    public AirplaneImp(int boardWidth) {
-        super(boardWidth);
+    public AirplaneImp(int boardWidth, int boardHeight) {
+        super(boardWidth, boardHeight);
     }
 
     private int getPlanePos(){
@@ -32,7 +32,12 @@ class AirplaneImp extends Airplane {
                         int newPos = (pos + 1) % boardWidth;
                         Board.getInstance().setBoard(0, pos, false);
                         Board.getInstance().setBoard(0, newPos, true);
-                        Thread.sleep(dropRate);
+
+                        if(dropRateCalculator.shouldDrop()){
+                            parachutesHandler.drop(new ParachuteImp(boardWidth, boardHeight, newPos));
+                        }
+
+                        Thread.sleep(PLANE_SPEED);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -47,17 +52,7 @@ class AirplaneImp extends Airplane {
     }
 
     @Override
-    public void difficulty(Difficulty diff) {
-        switch (diff){
-            case EASY:
-                dropRate = DROP_RATES[0];
-                break;
-            case NORMAL:
-                dropRate = DROP_RATES[1];
-                break;
-            case HARD:
-                dropRate = DROP_RATES[2];
-                break;
-        }
+    public void difficulty(Difficulty difficulty) {
+       dropRateCalculator.setDifficulty(difficulty);
     }
 }

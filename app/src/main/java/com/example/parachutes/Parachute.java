@@ -12,4 +12,5 @@ public abstract class Parachute {
     }
 
     public abstract void drop();
+    public abstract boolean isLanded();
 }
