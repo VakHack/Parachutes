@@ -4,24 +4,647 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:columnCount="15"
+        android:orientation="vertical"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:rowCount="10"
+        tools:ignore="RtlCompat,RtlHardcoded,RtlSymmetry">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/_0_0"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/plane" />
+
+            <ImageView
+                android:id="@+id/_0_1"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/plane" />
+
+            <ImageView
+                android:id="@+id/_0_2"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/plane" />
+
+            <ImageView
+                android:id="@+id/_0_3"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/plane" />
+
+            <ImageView
+                android:id="@+id/_0_4"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/plane" />
+
+            <ImageView
+                android:id="@+id/_0_5"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/plane" />
+
+            <ImageView
+                android:id="@+id/_0_6"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/plane" />
+
+            <ImageView
+                android:id="@+id/_0_7"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/plane" />
+
+            <ImageView
+                android:id="@+id/_0_8"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/plane" />
+
+            <ImageView
+                android:id="@+id/_0_9"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/plane" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/_1_0"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_1_1"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_1_2"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_1_3"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_1_4"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_1_5"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_1_6"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_1_7"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_1_8"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_1_9"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/_2_0"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_2_1"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_2_2"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_2_3"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_2_4"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_2_5"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_2_6"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_2_7"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_2_8"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_2_9"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/_3_0"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_3_1"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_3_2"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_3_3"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_3_4"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_3_5"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_3_6"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_3_7"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_3_8"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_3_9"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/_4_0"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_4_1"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_4_2"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_4_3"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_4_4"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_4_5"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_4_6"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_4_7"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_4_8"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_4_9"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/_5_0"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_5_1"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_5_2"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_5_3"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_5_4"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_5_5"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_5_6"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_5_7"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_5_8"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_5_9"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/_6_0"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_6_1"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_6_2"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_6_3"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_6_4"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_6_5"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_6_6"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_6_7"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_6_8"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+
+            <ImageView
+                android:id="@+id/_6_9"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/parachutist" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/_7_0"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/boat" />
+
+            <ImageView
+                android:id="@+id/_7_1"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/boat" />
+
+            <ImageView
+                android:id="@+id/_7_2"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/boat" />
+
+            <ImageView
+                android:id="@+id/_7_3"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/boat" />
+
+            <ImageView
+                android:id="@+id/_7_4"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/boat" />
+
+            <ImageView
+                android:id="@+id/_7_5"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/boat" />
+
+            <ImageView
+                android:id="@+id/_7_6"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/boat" />
+
+            <ImageView
+                android:id="@+id/_7_7"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/boat" />
+
+            <ImageView
+                android:id="@+id/_7_8"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/boat" />
+
+            <ImageView
+                android:id="@+id/_7_9"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/boat" />
+        </LinearLayout>
+    </LinearLayout>
+
 
     <ImageButton
         android:id="@+id/leftButton"
         android:layout_width="50dp"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
         app:srcCompat="@drawable/arrow"
-        tools:ignore="RtlHardcoded" />
+        tools:ignore="RtlCompat,RtlHardcoded" />
 
     <ImageButton
         android:id="@+id/rightButton"
         android:layout_width="50dp"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:layout_alignParentRight="true"
+        android:orientation="horizontal"
         android:scaleX="-1"
         app:srcCompat="@drawable/arrow"
-        tools:ignore="RtlHardcoded" />
+        tools:ignore="RtlCompat,RtlHardcoded" />
 </RelativeLayout>

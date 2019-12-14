@@ -4,17 +4,10 @@ class AirplaneImp extends Airplane {
     private int PLANE_SPEED = 1000;
     private ParachutesHandler parachutesHandler = new QueueParachutesHandler();
     private DropRateCalculator dropRateCalculator = new RandDropRateCalc();
+    private int pos = 0;
 
     public AirplaneImp(int boardWidth, int boardHeight) {
         super(boardWidth, boardHeight);
-    }
-
-    private int getPlanePos(){
-        int i = 0;
-        for(; i < boardWidth; ++i)
-            if(Board.getInstance().getBoard()[0][i])
-                break;
-        return i;
     }
 
     @Override
@@ -28,13 +21,13 @@ class AirplaneImp extends Airplane {
             public void run(){
                 while (true) {
                     try {
-                        int pos = getPlanePos();
-                        int newPos = (pos + 1) % boardWidth;
-                        Board.getInstance().setBoard(0, pos, false);
-                        Board.getInstance().setBoard(0, newPos, true);
+                        int oldPos = pos;
+                        pos = (oldPos + 1) % boardWidth;
+                        Board.getInstance().setBoard(0, oldPos, false);
+                        Board.getInstance().setBoard(0, pos, true);
 
                         if(dropRateCalculator.shouldDrop()){
-                            parachutesHandler.drop(new ParachuteImp(boardWidth, boardHeight, newPos));
+                            parachutesHandler.drop(new ParachuteImp(boardWidth, boardHeight, pos));
                         }
 
                         Thread.sleep(PLANE_SPEED);

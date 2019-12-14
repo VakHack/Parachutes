@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridLayout;
+import android.widget.GridView;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageButton leftButton;
     ImageButton rightButton;
+    GridLayout grid;
 
     void debugPrintBoard(){
         boolean[][] board = Board.getInstance().getBoard();
@@ -51,14 +54,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Board.getInstance().setSize(BOARD_HEIGHT, BOARD_WIDTH);
         engine.run();
-        debugRender();
+        debugPrintBoard();
         leftButton = findViewById(R.id.leftButton);
         rightButton = findViewById(R.id.rightButton);
+        grid = findViewById(R.id.grid);
 
         leftButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 engine.moveLeft();
+                debugPrintBoard();
             }
         });
 
@@ -66,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 engine.moveRight();
+                debugPrintBoard();
             }
         });
     }
