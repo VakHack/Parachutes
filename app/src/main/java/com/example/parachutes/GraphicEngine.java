@@ -10,5 +10,4 @@ public abstract class GraphicEngine {
     }
 
     abstract void render();
-    abstract void stop();
 }

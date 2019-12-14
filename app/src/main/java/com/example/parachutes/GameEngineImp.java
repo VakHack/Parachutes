@@ -17,16 +17,6 @@ public class GameEngineImp implements GameEngine {
     }
 
     @Override
-    public void stop() {
-
-    }
-
-    @Override
-    public void setDifficulty(Difficulty dif) {
-        airplane.difficulty(dif);
-    }
-
-    @Override
     public void moveLeft() {
         boat.moveLeft();
     }

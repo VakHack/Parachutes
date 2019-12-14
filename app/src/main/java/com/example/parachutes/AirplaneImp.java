@@ -34,14 +34,4 @@ class AirplaneImp implements Airplane {
             }
         }).start();
     }
-
-    @Override
-    public void stop() {
-
-    }
-
-    @Override
-    public void difficulty(Difficulty difficulty) {
-       dropRateCalculator.setDifficulty(difficulty);
-    }
 }

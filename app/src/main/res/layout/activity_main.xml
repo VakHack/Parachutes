@@ -8,21 +8,51 @@
     android:background="@drawable/background"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/pointsBar"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="30dp">
+        android:layout_height="50dp">
         <TextView
             android:id="@+id/score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="70dp"
+            android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:text="SCORE: "
-            android:textSize="15sp"
-            tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
-    </LinearLayout>
+            android:textSize="20sp"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#3192E7"
+            tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry,UnusedAttribute" />
+        <ImageView
+            android:id="@+id/heart_1"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/heart"
+            tools:ignore="RtlHardcoded" />
+        <ImageView
+            android:id="@+id/heart_2"
+            android:paddingTop="10dp"
+            android:layout_marginRight="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/heart"
+            tools:ignore="RtlHardcoded" />
+        <ImageView
+            android:id="@+id/heart_3"
+            android:paddingTop="10dp"
+            android:layout_marginRight="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/heart"
+            tools:ignore="RtlHardcoded" />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_below="@id/pointsBar"
@@ -664,6 +694,7 @@
         android:background="@android:color/transparent"
         android:orientation="horizontal"
         app:srcCompat="@drawable/arrow"
+        android:scaleX="-1"
         tools:ignore="RtlCompat,RtlHardcoded" />
 
     <ImageButton
@@ -674,6 +705,27 @@
         android:background="@android:color/transparent"
         android:orientation="horizontal"
         app:srcCompat="@drawable/arrow"
-        android:scaleX="-1"
         tools:ignore="RtlCompat,RtlHardcoded" />
+
+    <ImageView
+        android:id="@+id/gameOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:paddingBottom="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/game_over" />
+
+    <ImageButton
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/restart" />
 </RelativeLayout>
