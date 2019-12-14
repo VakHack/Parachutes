@@ -6,22 +6,21 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.GridLayout;
-import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private static int BOARD_HEIGHT = 8;
     private static int BOARD_WIDTH = 10;
     private static int RENDER_DELAY = 700;
-
     private Engine engine = new EngineImp();
-    private ImageView[][] imageViews = new ImageView[BOARD_HEIGHT][BOARD_WIDTH];
 
+    //screen views
+    private ImageView[][] imageViews = new ImageView[BOARD_HEIGHT][BOARD_WIDTH];
     ImageButton leftButton;
     ImageButton rightButton;
+    TextView score;
 
     void debugPrintBoard(){
         boolean[][] board = Board.getInstance().getBoard();
@@ -51,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 printBoard();
+                String newScore = "Score: " + Board.getInstance().getScore();
+                score.setText(newScore);
                 handler.postDelayed(this, RENDER_DELAY);
             }
         }, RENDER_DELAY);
@@ -70,11 +71,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Board.getInstance().setSize(BOARD_HEIGHT, BOARD_WIDTH);
+
+        //init views
         initImageViews();
-        engine.run();
         leftButton = findViewById(R.id.leftButton);
         rightButton = findViewById(R.id.rightButton);
+        score = findViewById(R.id.score);
+
+        Board.getInstance().setSize(BOARD_HEIGHT, BOARD_WIDTH);
+        engine.run();
         render();
 
         leftButton.setOnClickListener(new View.OnClickListener() {

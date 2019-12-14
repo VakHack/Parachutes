@@ -39,6 +39,7 @@ public class ParachuteImp extends Parachute {
                 //when the parachutist get to last row, we want to remove its animation
                 //right away (make it "disappear")
                 Board.getInstance().setBoard(height, pos, false);
+                new ParachuteHitOrMissHandler(pos);
                 isLanded = true;
             }
         }).start();

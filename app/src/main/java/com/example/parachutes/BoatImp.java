@@ -9,9 +9,9 @@ public class BoatImp implements Boat {
             public void run(){
                 int oldPos = pos;
                 int boardWidth = Board.getInstance().getWidth();
-                //two possibilities to boat position change - right, meaning adding + 1. Modulo covers
-                //the return to the left end. In case of left, subtraction can get us past zero,
-                //in that case, returning the the right end
+                //two possibilities to the boat position change - right, meaning adding + 1. Modulo covers
+                //the return to the left end. In case of a left, subtraction can get us past zero,
+                //in that case, returning to the right end
                 pos = (oldPos + addToPos) >= 0 ? (oldPos + addToPos) % boardWidth : boardWidth - 1;
                 Board.getInstance().setBoard(boatVerticalPos, oldPos, false);
                 Board.getInstance().setBoard(boatVerticalPos, pos, true);
