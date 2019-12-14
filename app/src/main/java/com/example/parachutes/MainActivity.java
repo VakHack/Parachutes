@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private static int BOARD_WIDTH = 10;
     private static int RENDER_DELAY = 700;
 
-    private Engine engine = new EngineImp(BOARD_HEIGHT, BOARD_WIDTH);
+    private Engine engine = new EngineImp();
     private ImageView[][] imageViews = new ImageView[BOARD_HEIGHT][BOARD_WIDTH];
 
     ImageButton leftButton;

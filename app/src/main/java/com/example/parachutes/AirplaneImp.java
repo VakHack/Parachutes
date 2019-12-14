@@ -1,17 +1,13 @@
 package com.example.parachutes;
 
-class AirplaneImp extends Airplane {
+class AirplaneImp implements Airplane {
     private int PLANE_SPEED = 1000;
     private ParachutesHandler parachutesHandler = new QueueParachutesHandler();
     private DropRateCalculator dropRateCalculator = new RandDropRateCalc();
     private int pos = 0;
 
-    public AirplaneImp(int boardHeight, int boardWidth) {
-        super(boardHeight, boardWidth);
-    }
-
     @Override
-    void setInitialPos() {
+    public void setInitialPos() {
         Board.getInstance().setBoard(0, 0, true);
     }
 
@@ -22,12 +18,12 @@ class AirplaneImp extends Airplane {
                 while (true) {
                     try {
                         int oldPos = pos;
-                        pos = (oldPos + 1) % boardWidth;
+                        pos = (oldPos + 1) % Board.getInstance().getWidth();
                         Board.getInstance().setBoard(0, oldPos, false);
                         Board.getInstance().setBoard(0, pos, true);
 
                         if(dropRateCalculator.shouldDrop()){
-                            parachutesHandler.drop(new ParachuteImp(boardHeight, boardWidth, pos));
+                            parachutesHandler.drop(new ParachuteImp(pos));
                         }
 
                         Thread.sleep(PLANE_SPEED);

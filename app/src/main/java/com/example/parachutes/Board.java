@@ -10,13 +10,15 @@ public class Board {
     private boolean[][] board;
     private int points = 0;
     private int lives = 3;
+    private int height;
+    private int width;
 
     //here board size is to be determined. Min 4*4
     //starting with an empty board (no initialization needed - default val is already false)
     public void setSize(int height, int width) {
-        height = height < 4 ? 4 : height;
-        width = width < 4 ? 4 : width;
-        board = new boolean[height][width];
+        this.height = height < 4 ? 4 : height;
+        this.width = width < 4 ? 4 : width;
+        board = new boolean[this.height][this.width];
     }
 
     //synchronized because will be edited by two threads - airplane and boat
@@ -44,6 +46,14 @@ public class Board {
 
     public void setLives(int lives) {
         this.lives = lives;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getWidth() {
+        return width;
     }
 }
 

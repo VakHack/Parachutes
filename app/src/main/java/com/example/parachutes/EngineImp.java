@@ -1,13 +1,12 @@
 package com.example.parachutes;
 
-public class EngineImp extends Engine {
+public class EngineImp implements Engine {
     private Airplane airplane;
     private Boat boat;
 
-    public EngineImp(int boardHeight, int boardWidth) {
-        super(boardHeight, boardWidth);
-        airplane = new AirplaneImp(boardHeight, boardWidth);
-        boat = new BoatImp(boardHeight, boardWidth);
+    public EngineImp() {
+        airplane = new AirplaneImp();
+        boat = new BoatImp();
     }
 
     @Override
