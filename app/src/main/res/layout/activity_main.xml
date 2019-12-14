@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -170,7 +171,6 @@
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/parachutist" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -246,7 +246,6 @@
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/parachutist" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -322,7 +321,6 @@
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/parachutist" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -398,7 +396,6 @@
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/parachutist" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -474,7 +471,6 @@
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/parachutist" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -550,10 +546,10 @@
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/parachutist" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/sea"
             android:orientation="horizontal">
 
             <ImageView
@@ -634,6 +630,7 @@
         android:layout_width="50dp"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
+        android:background="@android:color/transparent"
         android:orientation="horizontal"
         app:srcCompat="@drawable/arrow"
         tools:ignore="RtlCompat,RtlHardcoded" />
@@ -643,6 +640,7 @@
         android:layout_width="50dp"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
         android:orientation="horizontal"
         android:scaleX="-1"
         app:srcCompat="@drawable/arrow"

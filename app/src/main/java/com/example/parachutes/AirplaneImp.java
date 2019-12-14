@@ -6,8 +6,8 @@ class AirplaneImp extends Airplane {
     private DropRateCalculator dropRateCalculator = new RandDropRateCalc();
     private int pos = 0;
 
-    public AirplaneImp(int boardWidth, int boardHeight) {
-        super(boardWidth, boardHeight);
+    public AirplaneImp(int boardHeight, int boardWidth) {
+        super(boardHeight, boardWidth);
     }
 
     @Override
@@ -27,7 +27,7 @@ class AirplaneImp extends Airplane {
                         Board.getInstance().setBoard(0, pos, true);
 
                         if(dropRateCalculator.shouldDrop()){
-                            parachutesHandler.drop(new ParachuteImp(boardWidth, boardHeight, pos));
+                            parachutesHandler.drop(new ParachuteImp(boardHeight, boardWidth, pos));
                         }
 
                         Thread.sleep(PLANE_SPEED);

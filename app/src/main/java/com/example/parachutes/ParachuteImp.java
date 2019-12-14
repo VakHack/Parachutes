@@ -1,5 +1,7 @@
 package com.example.parachutes;
 
+import android.util.Log;
+
 public class ParachuteImp extends Parachute {
     //initializing height to the top of the board (parachutes constant initial height)
     private int height;
@@ -7,20 +9,25 @@ public class ParachuteImp extends Parachute {
     private int DROP_SPEED = 1200;
     private boolean isLanded = false;
 
-    public ParachuteImp(int boardWidth, int boardHeight, int initialPos) {
-        super(boardWidth, boardHeight, initialPos);
-        height = boardHeight - 1;
+    public ParachuteImp(int boardHeight, int boardWidth, int initialPos) {
+        super(boardHeight, boardWidth, initialPos);
+        height = 0;
+        //adding a parachutist pic to the first location
         pos = initialPos;
+        Board.getInstance().setBoard(height, pos, true);
     }
 
     @Override
     public void drop() {
+        final int BOAT_ROW = boardHeight - 1;
         new Thread(new Runnable() {
             public void run(){
-                while (height > 0) {
+                //we want to stop the dropping down logic one row before the boat row
+                //to avoid animation collision with their objects
+                while (height < BOAT_ROW - 1) {
                     try {
                         int oldHeight = height;
-                        height -= 1;
+                        height += 1;
                         int oldPos = pos;
                         pos = (pos + 1) % boardWidth;
                         Board.getInstance().setBoard(oldHeight, oldPos, false);
@@ -30,6 +37,9 @@ public class ParachuteImp extends Parachute {
                         e.printStackTrace();
                     }
                 }
+                //when the parachutist get to last row, we want to remove its animation
+                //right away (make it "disappear")
+                Board.getInstance().setBoard(height, pos, false);
                 isLanded = true;
             }
         }).start();

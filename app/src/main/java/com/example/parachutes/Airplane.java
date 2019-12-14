@@ -1,12 +1,12 @@
 package com.example.parachutes;
 
 abstract class Airplane {
-    protected int boardWidth;
     protected int boardHeight;
+    protected int boardWidth;
 
-    public Airplane(int boardWidth, int boardHeight) {
-        this.boardWidth = boardWidth;
+    public Airplane(int boardHeight, int boardWidth) {
         this.boardHeight = boardHeight;
+        this.boardWidth = boardWidth;
     }
 
     abstract void setInitialPos();

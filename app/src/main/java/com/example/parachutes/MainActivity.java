@@ -15,6 +15,8 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
     private static int BOARD_HEIGHT = 8;
     private static int BOARD_WIDTH = 10;
+    private static int RENDER_DELAY = 500;
+
     private Engine engine = new EngineImp(BOARD_HEIGHT, BOARD_WIDTH);
     private ImageView[][] imageViews = new ImageView[BOARD_HEIGHT][BOARD_WIDTH];
 
@@ -49,9 +51,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 printBoard();
-                handler.postDelayed(this, 1000);
+                handler.postDelayed(this, RENDER_DELAY);
             }
-        }, 1000);
+        }, RENDER_DELAY);
     }
 
     void initImageViews(){
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 String img = "_" + i + "_" + j;
                 int id = getResources().getIdentifier(img, "id", getPackageName());
                 imageViews[i][j] = findViewById(id);
+                imageViews[i][j].setVisibility(View.INVISIBLE);
             }
     }
 
@@ -78,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 engine.moveLeft();
-                debugPrintBoard();
             }
         });
 
@@ -86,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 engine.moveRight();
-                debugPrintBoard();
             }
         });
     }

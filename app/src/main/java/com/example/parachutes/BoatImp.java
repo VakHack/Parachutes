@@ -4,8 +4,8 @@ public class BoatImp extends Boat {
     private int boatVerticalPos = boardHeight-1;
     private int pos = 0;
 
-    public BoatImp(int boardWidth, int boardHeight) {
-        super(boardWidth, boardHeight);
+    public BoatImp(int boardHeight, int boardWidth) {
+        super(boardHeight, boardWidth);
     }
 
     private void moveLogic(final int addToPos){

@@ -6,8 +6,8 @@ public class EngineImp extends Engine {
 
     public EngineImp(int boardHeight, int boardWidth) {
         super(boardHeight, boardWidth);
-        airplane = new AirplaneImp(boardWidth, boardHeight);
-        boat = new BoatImp(boardWidth, boardHeight);
+        airplane = new AirplaneImp(boardHeight, boardWidth);
+        boat = new BoatImp(boardHeight, boardWidth);
     }
 
     @Override
