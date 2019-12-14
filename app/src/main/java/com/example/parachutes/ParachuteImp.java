@@ -7,11 +7,12 @@ public class ParachuteImp extends Parachute {
     private int height;
     private int pos;
     private int DROP_SPEED = 1200;
+    //a flag for the parachutes handler, signaling this Parachute is done
     private boolean isLanded = false;
 
     public ParachuteImp(int boardHeight, int boardWidth, int initialPos) {
         super(boardHeight, boardWidth, initialPos);
-        height = 0;
+        height = 1;
         //adding a parachutist pic to the first location
         pos = initialPos;
         Board.getInstance().setBoard(height, pos, true);

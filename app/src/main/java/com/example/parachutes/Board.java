@@ -8,6 +8,8 @@ public class Board {
         return ourInstance;
     }
     private boolean[][] board;
+    private int points = 0;
+    private int lives = 3;
 
     //here board size is to be determined. Min 4*4
     //starting with an empty board (no initialization needed - default val is already false)
@@ -26,4 +28,23 @@ public class Board {
 
     public synchronized boolean[][] getBoard() {
         return board;
-    }}
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+    public int getLives() {
+        return lives;
+    }
+
+    public void setLives(int lives) {
+        this.lives = lives;
+    }
+}
+
+
