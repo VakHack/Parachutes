@@ -1,10 +1,10 @@
 package com.example.parachutes;
 
-public class EngineImp implements Engine {
+public class GameEngineImp implements GameEngine {
     private Airplane airplane;
     private Boat boat;
 
-    public EngineImp() {
+    public GameEngineImp() {
         airplane = new AirplaneImp();
         boat = new BoatImp();
     }

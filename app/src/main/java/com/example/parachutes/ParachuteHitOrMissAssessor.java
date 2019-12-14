@@ -2,10 +2,10 @@ package com.example.parachutes;
 
 import android.util.Log;
 
-public class ParachuteHitOrMissHandler {
+public class ParachuteHitOrMissAssessor {
     private int lastPos;
 
-    public ParachuteHitOrMissHandler(int lastPos) {
+    public ParachuteHitOrMissAssessor(int lastPos) {
         this.lastPos = lastPos;
         updateBoardScore();
     }

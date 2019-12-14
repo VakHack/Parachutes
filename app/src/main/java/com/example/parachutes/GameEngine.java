@@ -1,6 +1,6 @@
 package com.example.parachutes;
 
-public interface Engine {
+public interface GameEngine {
     void run();
     void stop();
     void setDifficulty(Difficulty dif);
