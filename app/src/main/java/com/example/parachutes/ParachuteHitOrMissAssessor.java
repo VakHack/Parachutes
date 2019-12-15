@@ -1,7 +1,5 @@
 package com.example.parachutes;
 
-import android.util.Log;
-
 public class ParachuteHitOrMissAssessor {
     private int lastPos;
 
@@ -10,7 +8,7 @@ public class ParachuteHitOrMissAssessor {
         updateScore();
     }
 
-    private int getBoatPos(){
+    private int findBoatPos(){
         int i = 0;
         int boatHeight = Board.getInstance().getHeight()-1;
         for(; i < Board.getInstance().getWidth(); ++i)
@@ -20,11 +18,10 @@ public class ParachuteHitOrMissAssessor {
     }
 
     private void updateScore(){
-        //if boat is plus one coordinate (x-axis) from us, its a hit
-        //or when the boat right beneath it
-        int boatPos = getBoatPos();
+        //if the boat is plus one coordinate (x-axis) from us, its a hit
+        //or when the boat right beneath us
+        int boatPos = findBoatPos();
         if (lastPos==boatPos || lastPos+1==boatPos){
-            Log.e("test", lastPos+"");
             Board.getInstance().pointsIncrement();
         }
         else{

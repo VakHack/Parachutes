@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //init button
+        //initialing buttons
         ImageButton leftButton = findViewById(R.id.leftButton);
         ImageButton rightButton = findViewById(R.id.rightButton);
-        ImageButton restart = findViewById(R.id.restart);
+        ImageButton restartButton = findViewById(R.id.restart);
 
-        //setting the size of the game board
+        //initialing the game board
         Board.getInstance().InitBoard(BOARD_HEIGHT, BOARD_WIDTH);
 
         runGame();
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        restart.setOnClickListener(new View.OnClickListener() {
+        restartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Board.getInstance().InitBoard(BOARD_HEIGHT, BOARD_WIDTH);
