@@ -1,5 +1,7 @@
 package com.example.parachutes;
 
+//a module that reads the board whenever a parachutist gets to the bottom row
+//and assess whether the boat collected him successfully - and to update the board accordingly
 public class ParachuteHitOrMissAssessor {
     private int lastPos;
 
@@ -18,8 +20,9 @@ public class ParachuteHitOrMissAssessor {
     }
 
     private void updateScore(){
-        //if the boat is plus one coordinate (x-axis) from us, its a hit
-        //or when the boat right beneath us
+        //if the boat is plus one coordinate (x-axis) from us, or when the boat
+        //right beneath the parachutist, it a hit - the two location seems to be
+        //valid for the parachutist collection from a player point of view
         int boatPos = findBoatPos();
         if (lastPos==boatPos || lastPos+1==boatPos){
             Board.getInstance().pointsIncrement();

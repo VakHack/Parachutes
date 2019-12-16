@@ -3,12 +3,17 @@ package com.example.parachutes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 
+//"Parachutes" app
+//Author: Roee Vakrat
+//Created: 13/12/19
 public class MainActivity extends AppCompatActivity {
-    private static int BOARD_HEIGHT = 8;
-    private static int BOARD_WIDTH = 10;
+    private final int BOARD_HEIGHT = 8;
+    private final int BOARD_WIDTH = 10;
     private GameEngine gameEngine;
     private GraphicEngine graphicEngine;
 

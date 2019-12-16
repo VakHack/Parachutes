@@ -9,10 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class GraphicEngineImp extends GraphicEngine {
-    private static int RENDER_DELAY = 700;
     private int boardHeight = Board.getInstance().getHeight();
     private int boardWidth = Board.getInstance().getWidth();
     private boolean doesGameOver = false;
+
+    //defining the interval on which the screen object will be re-rendered (milliseconds)
+    private static int RENDER_DELAY = 100;
 
     //screen image view initialization
     private ImageView[][] imageViews = new ImageView[boardHeight][boardWidth];

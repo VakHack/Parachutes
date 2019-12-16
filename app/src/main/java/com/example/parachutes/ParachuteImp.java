@@ -4,7 +4,7 @@ public class ParachuteImp extends Parachute {
     //initializing height to the top of the board (parachutes constant initial height)
     private int height;
     private int pos;
-    private int DROP_SPEED = 1200;
+    private final int DROP_SPEED = 1000;
     //a flag for the parachutes handler, signaling this Parachute is done
     private boolean isLanded = false;
 
